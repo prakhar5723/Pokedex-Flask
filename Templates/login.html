@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Pokedex | Login</title>
+    <link rel="stylesheet" href="/static/css/login.css"> <!--Link to the CSS File-->
+  </head>
+  <body>
+    <div class="background-image">
+      <div class="container">
+        <div class="card">
+            <button type="button" class="back" onclick="window.location.href='/'">Back</button>
+          <h2>Login</h2>
+          {% if error %}
+            <div class="alert alert-danger"><span style="color: red;">{{ error }}</span><br></div>
+          {% endif %}
+          <form action = "" method="post">
+            {{ form.csrf_token }}
+            <div class="form-group">
+              <label for="username">Username</label>
+              {{ form.username(class="form-control", id="username", required=true) }}
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              {{ form.password(class="form-control", id="password", required=true) }}
+            </div>
+            <button type="submit" class="login">Login</button>
+            <p>Not Registered?<button type="button" class="back" onclick="window.location.href='/signup'">Sign up</button></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

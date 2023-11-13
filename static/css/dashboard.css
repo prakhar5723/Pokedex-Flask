@@ -1,0 +1,160 @@
+body {
+  background-color: grey;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 10px;
+}
+
+header img {
+  height: 50px;
+  width: 140px;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.user-info {
+  text-align: right;
+}
+
+a[href="/logout"] {
+  width: auto;
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+a[href="/logout"]:hover {
+  background-color: red;
+}
+
+.search {
+  gap: 10px;
+  padding: 10px;
+}
+
+#searchInput {
+  width: auto;
+  height: auto;
+  font-size: 32px;
+  padding: 15px 45px;
+  background-color: #b4b4b4;
+  color: black;
+  border-radius: 25px;
+  text-align: center;
+}
+
+#searchButton {
+  width: 128px;
+  height: 64px;
+  font-size: 32px;
+  background-color: transparent;
+  border-radius: 25px;
+  color: black;
+  box-shadow: inset 15px;
+}
+
+#searchButton:hover {
+  background-color: black;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Card {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: auto;
+  gap: 20px;
+}
+
+.Search_Card {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.new_pokemon {
+  background-color: #d4d1d1;
+  border-radius: 60px;
+  box-shadow: 0 5px 15px rgba(226, 223, 226, 5);
+  padding: 30px;
+  margin-top: 40px;
+  margin-left: 80px;
+  align-items: center;
+  margin-right: 20px;
+  width: max-content;
+  min-width: 350px;
+}
+
+.new_pokemon .Image {
+  background-color: rgba(219, 209, 209, 0.848);
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+}
+
+.Image img {
+  max-width: auto;
+  margin-top: 15px;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}
+
+.Zoom {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(90, 90, 90, 0.8);
+  z-index: 9999;
+  text-align: center;
+}
+
+.Zoom img{
+  width: 500px;
+  height: max-content;
+}
+
+.Card .new_pokemon .base_deatils{
+  width: 350px;
+  align-items: left;
+  text-align: left;
+  font-size: 24pt;
+}
+
+.ID {
+  background-color: rgba(193, 193, 193, 0.847);
+  color: black;
+  padding: 5px 10px;
+  gap: 10px;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  font-size: 0.8em;
+}
+

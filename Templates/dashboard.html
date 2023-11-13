@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Pokedex | Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/dashboard.css">  <!--Link to the CSS File-->
+</head>
+<body>
+    <header>
+        <a href="/dashboard"><img src="/static/images/logo.png" alt="Logo"></a> 
+        <h1>Welcome <u><i>{{session.username}}</i></u> to the Advanced Pokedex</h1>
+        {% if session.username %}
+            <div class="user-info">
+                <a href="/logout">Log out</a>
+            </div>
+        {% endif %}
+    </header>
+    <div class = "search" id = "search">
+        <input type="text" id="searchInput" placeholder="Search Pokémon...">
+        <button id="searchButton" onclick="hide()">Search</button>
+        </div>
+    <div class = "Card" id = "Card"></div>
+    <div class = "Search_Card" id = "Search_Card"></div>
+    <div class = "Zoom">
+        <img  id = "Zoom_img" src="" onclick= "HideZoom()">
+      </div>
+    <script src="/static/js/script.js"></script>  <!--Link to the JavaScript File-->
+</body>
+</html>
